@@ -20,7 +20,7 @@ namespace Dolgozok
 
         public new string ToString()
         {
-            return "Dologzó, a gazdasági osztály: " + AdoSzam + ", " + Fizetes();
+            return "Dologzó: " + AdoSzam + ", " + Fizetes();
         }
     }
 }
