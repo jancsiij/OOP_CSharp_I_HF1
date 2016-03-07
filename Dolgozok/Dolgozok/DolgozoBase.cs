@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Dolgozok
 {
-    class Dolgozo
+    abstract class DolgozoBase
     {
         public string Nev { get; private set; }
         public string Cim { get; private set; }
         public int AdoSzam { get; private set; }
         public float AlapFizetes { get; private set; }
 
-        public Dolgozo(string nev, string cim, int adoSzam, float alapFizetes)
+        public DolgozoBase(string nev, string cim, int adoSzam, float alapFizetes)
         {
             this.Nev = nev;
             this.Cim = cim;
@@ -21,9 +21,9 @@ namespace Dolgozok
             this.AlapFizetes = alapFizetes;
         }
 
-        public override string ToString()
+        public new string ToString()
         {
-            return Nev + ", " + Cim;
+            return "Dologzo: " + Nev + ", " + Cim;
         }
     }
 }

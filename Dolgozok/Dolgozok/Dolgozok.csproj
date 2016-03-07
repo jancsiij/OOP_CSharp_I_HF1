@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alkalmazott.cs" />
+    <Compile Include="Alvalalkozo.cs" />
+    <Compile Include="Dolgozo.cs" />
+    <Compile Include="DolgozoBase.cs" />
+    <Compile Include="IFizetes.cs" />
+    <Compile Include="Kiszervezett.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
