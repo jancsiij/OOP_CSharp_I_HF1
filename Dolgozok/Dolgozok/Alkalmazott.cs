@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dolgozok
 {
-    class Alkalmazott : Dolgozo
+    class Alkalmazott : FizetettDolgozo
     {
         public int BelsoAzonosito { get; private set; }
         public string Beosztas { get; private set; }
@@ -24,12 +24,12 @@ namespace Dolgozok
 
         public override float Fizetes()
         {
-            return AlapFizetes + Tulorak * TuloraDij;
+            return base.Fizetes()+ Tulorak * TuloraDij;
         }
 
-        public new string ToString()
+        public new string Print()
         {
-            return this.Beosztas + ", " + this.Nev;
+            return Beosztas + ", " +Nev;
         }
     }
 }

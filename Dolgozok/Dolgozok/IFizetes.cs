@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Dolgozok
 {
-    interface IFizetes
+    interface IPrint
     {
-        float Fizetes();
+        string Print();
     }
 }

@@ -45,8 +45,8 @@
   <ItemGroup>
     <Compile Include="Alkalmazott.cs" />
     <Compile Include="Alvalalkozo.cs" />
+    <Compile Include="FizetettDolgozot.cs" />
     <Compile Include="Dolgozo.cs" />
-    <Compile Include="DolgozoBase.cs" />
     <Compile Include="IFizetes.cs" />
     <Compile Include="Kiszervezett.cs" />
     <Compile Include="Program.cs" />

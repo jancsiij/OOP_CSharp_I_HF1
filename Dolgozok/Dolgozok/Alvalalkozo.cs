@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dolgozok
 {
-     class Alvalalkozo : Dolgozo
+     class Alvalalkozo : FizetettDolgozo
     {
         public DateTime SzerzodesVege { get; private set; }
         public string Feladat { get; private set; }
@@ -22,12 +22,12 @@ namespace Dolgozok
 
         public override float Fizetes()
         {
-            return AlapFizetes * SikerDij;
+            return base.Fizetes() + SikerDij;
         }
 
-        public new string ToString()
+        public new string Print()
         {
-            return "Alvállalkozó" + this.SzerzodesVege + ", " + this.Nev;
+            return SzerzodesVege + ", " + Nev;
         }
     }
 }

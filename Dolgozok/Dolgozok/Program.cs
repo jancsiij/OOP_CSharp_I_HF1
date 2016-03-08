@@ -19,45 +19,45 @@ namespace Dolgozok
             Alvalalkozo alv5 = new Alvalalkozo("BAlfonz", "Budapest", 100000, 10000, new DateTime(2016, 11, 11), "szipu", 200);
             Kiszervezett kisz1 = new Kiszervezett("Rekt", "Pécs", 111112, 200000, "asd", "Matro", 40000);
 
-            List<DolgozoBase> AlapDolgozok = new List<DolgozoBase>();
-            AlapDolgozok.Add(dolg1);
-            AlapDolgozok.Add(alk1);
-            AlapDolgozok.Add(alv1);
-            AlapDolgozok.Add(kisz1);
+            //List<DolgozoBase> AlapDolgozok = new List<DolgozoBase>();
+            //AlapDolgozok.Add(dolg1);
+            //AlapDolgozok.Add(alk1);
+            //AlapDolgozok.Add(alv1);
+            //AlapDolgozok.Add(kisz1);
+
+            List<IPrint> fizetettDolgozok = new List<IPrint>();
+            fizetettDolgozok.Add(dolg1);
+            fizetettDolgozok.Add(alk1);
+            fizetettDolgozok.Add(alv1);
+            fizetettDolgozok.Add(kisz1);
+
+            //List<Alvalalkozo> Alvalalkozok = new List<Alvalalkozo>();
+            //Alvalalkozok.Add(alv1);
+            //Alvalalkozok.Add(alv2);
+            //Alvalalkozok.Add(alv3);
+            //Alvalalkozok.Add(alv4);
 
 
 
-            List<Alvalalkozo> Alvalalkozok = new List<Alvalalkozo>();
+            //List<Alvalalkozo> RendezettAlvalalkozok = Alvalalkozok.OrderBy(x => x.SzerzodesVege).ThenBy(x => x.Nev).ToList();
 
-            Alvalalkozok.Add(alv1);
-            Alvalalkozok.Add(alv2);
-            Alvalalkozok.Add(alv3);
-            Alvalalkozok.Add(alv4);
+            Console.WriteLine("Név, cím");
 
-            List<Alvalalkozo> RendezettAlvalalkozok = Alvalalkozok.OrderBy(x => x.SzerzodesVege).ThenBy(x => x.Nev).ToList();
-
-            foreach (Dolgozo item in RendezettAlvalalkozok)
+            foreach (Dolgozo item in fizetettDolgozok)
             {
-                Console.WriteLine(item.ToString());
-
+                Console.WriteLine(item.Print());
             }
+
             Console.WriteLine();
+            Console.WriteLine("Név, pontos fizetés");
 
-            foreach (var item in AlapDolgozok)
+            foreach (IPrint item in fizetettDolgozok)
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine(item.Print());
+
             }
 
-            List<Dolgozo> Dolgozok = new List<Dolgozo>();
-            Dolgozok.Add(dolg1);
-            Dolgozok.Add(alk1);
-            Dolgozok.Add(alv1);
-            Dolgozok.Add(kisz1);
 
-            foreach (var item in Dolgozok)
-            {
-                Console.WriteLine(item.ToString());
-            }
 
 
             Console.ReadKey();

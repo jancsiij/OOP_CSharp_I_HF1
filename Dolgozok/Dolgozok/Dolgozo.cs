@@ -6,21 +6,26 @@ using System.Threading.Tasks;
 
 namespace Dolgozok
 {
-    class Dolgozo : DolgozoBase
+    class Dolgozo : IPrint
     {
+        public string Nev { get; private set; }
+        public string Cim { get; private set; }
+        public int AdoSzam { get; private set; }
+        public float AlapFizetes { get; private set; }
 
-        public Dolgozo(string nev, string cim, int adoSzam, float alapFizetes) : base(nev, cim, adoSzam, alapFizetes)
+        public Dolgozo(string nev, string cim, int adoSzam, float alapFizetes)
         {
+            this.Nev = nev;
+            this.Cim = cim;
+            this.AdoSzam = adoSzam;
+            this.AlapFizetes = alapFizetes;
         }
 
-        public virtual float Fizetes()
+        public virtual string Print()
         {
-            return AlapFizetes;
+            return Nev + ", " + Cim;
         }
 
-        public new string ToString()
-        {
-            return "Dologzó: " + AdoSzam + ", " + Fizetes();
-        }
+
     }
 }
