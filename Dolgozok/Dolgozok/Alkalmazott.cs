@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dolgozok
 {
-    class Alkalmazott : FizetettDolgozo
+    class Alkalmazott : Dolgozo
     {
         public int BelsoAzonosito { get; private set; }
         public string Beosztas { get; private set; }

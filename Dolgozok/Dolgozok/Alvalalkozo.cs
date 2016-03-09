@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dolgozok
 {
-     class Alvalalkozo : FizetettDolgozo
+     class Alvalalkozo : Dolgozo, IComparable
     {
         public DateTime SzerzodesVege { get; private set; }
         public string Feladat { get; private set; }
@@ -28,6 +28,18 @@ namespace Dolgozok
         public new string Print()
         {
             return SzerzodesVege + ", " + Nev;
+        }
+
+        public int CompareTo(object obj)
+        {
+            
+            Alvalalkozo other = obj as Alvalalkozo;
+
+            if (SzerzodesVege >= other.SzerzodesVege)
+            {
+                return Nev.CompareTo(other.Nev);
+            }
+            return -1;
         }
     }
 }
