@@ -33,7 +33,7 @@ namespace Dolgozok
         public int CompareTo(object obj)
         {
             Kiszervezett other = obj as Kiszervezett;
-            if(Munkaltato.CompareTo(other.Munkaltato) >= 0)
+            if(Munkaltato.CompareTo(other.Munkaltato) > 0)
             {
                 return Nev.CompareTo(other.Nev);
             }

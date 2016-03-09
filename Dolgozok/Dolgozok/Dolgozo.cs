@@ -13,8 +13,6 @@ namespace Dolgozok
         {
         }
 
-
-
         public new string Print()
         {
             return Nev + ", " + Cim;
