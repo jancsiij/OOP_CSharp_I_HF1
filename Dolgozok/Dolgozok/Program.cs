@@ -8,15 +8,32 @@ namespace Dolgozok
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            Dolgozo dolg1 = new Dolgozo("Klára", "Kecskemét", 11113, 90000);
-            Alkalmazott alk1 = new Alkalmazott("Ferenc", "Sásd", 111114, 40000, 13, "Utcaseprő", 500, 2);
-            Alvalalkozo alv1 = new Alvalalkozo("Alfonz", "Budapest", 100000, 10000, new DateTime(2016, 11, 11), "szipu", 200);
-            Alvalalkozo alv2 = new Alvalalkozo("cAlfonz", "Budapest", 100000, 10000, new DateTime(2016, 11, 11), "szipu", 200);
-            Alvalalkozo alv3 = new Alvalalkozo("BAlfonz", "Budapest", 100000, 10000, new DateTime(2015, 11, 11), "szipu", 200);
-            Alvalalkozo alv4 = new Alvalalkozo("ZAlfonz", "Budapest", 100000, 10000, new DateTime(2016, 11, 11), "szipu", 200);
-            Alvalalkozo alv5 = new Alvalalkozo("BAlfonz", "Budapest", 100000, 10000, new DateTime(2014, 11, 11), "szipu", 200);
+
+            List<Dolgozo> dolgozok = new List<Dolgozo>();
+            dolgozok.Add(new Dolgozo("Klára", "Kecskemét", 11113, 90000));
+            dolgozok.Add(new Dolgozo("Kata", "Kiskunasdasd", 11114, 100000));
+            dolgozok.Add(new Dolgozo("Kriszti", "Káva", 11115, 80000));
+            dolgozok.Add(new Dolgozo("Kalap", "Kalapács", 11116, 70000));
+            dolgozok.Add(new Dolgozo("K", "Ki", 11117, 60000));
+
+            List<Alvalalkozo> alvalalkozok = new List<Alvalalkozo>();
+            
+            alvalalkozok.Add(new Alvalalkozo("Alfonz", "Budapest", 100000, 10000, new DateTime(2016, 11, 11), "szipu", 200));
+            alvalalkozok.Add(new Alvalalkozo("cAlfonz", "Budapest", 100000, 10000, new DateTime(2016, 11, 11), "szipu", 200));
+            alvalalkozok.Add(new Alvalalkozo("BAlfonz", "Budapest", 100000, 10000, new DateTime(2015, 11, 11), "szipu", 200));
+            alvalalkozok.Add(new Alvalalkozo("ZAlfonz", "Budapest", 100000, 10000, new DateTime(2016, 11, 11), "szipu", 200));
+            alvalalkozok.Add(new Alvalalkozo("BAlfonz", "Budapest", 100000, 10000, new DateTime(2014, 11, 11), "szipu", 200));
+
+            List<Alkalmazott> alkalmazottak = new List<Alkalmazott>();
+            alkalmazottak.Add(new Alkalmazott("Ferenc", "Sásd", 111114, 40000, 13, "Utcaseprő", 500, 2));
+            alkalmazottak.Add(new Alkalmazott("Flórián", "Sakk", 111114, 40000, 13, "Kéményseprő", 500, 2));
+            alkalmazottak.Add(new Alkalmazott("Fanta", "Sitt", 111114, 40000, 13, "Tetőseprő", 500, 2));
+            alkalmazottak.Add(new Alkalmazott("Fila", "Sott", 111114, 40000, 13, "Asztalseprő", 500, 2));
+            alkalmazottak.Add(new Alkalmazott("Fun", "Sál", 111114, 40000, 13, "Utcaseprő", 500, 2));
+
             Kiszervezett kisz1 = new Kiszervezett("Alba", "Pécs", 111112, 200000, "asd", "Matro", 40000);
             Kiszervezett kisz2 = new Kiszervezett("Feri", "Pécs", 111112, 200000, "asd", "Batro", 40000);
             Kiszervezett kisz3 = new Kiszervezett("Teve", "Pécs", 111112, 200000, "asd", "Matro", 40000);
@@ -37,7 +54,6 @@ namespace Dolgozok
             dolgozok.Add(alv1);
             dolgozok.Add(kisz1);
 
-            List<Alvalalkozo> Alvalalkozok = new List<Alvalalkozo>();
             Alvalalkozok.Add(alv1);
             Alvalalkozok.Add(alv2);
             Alvalalkozok.Add(alv3);
